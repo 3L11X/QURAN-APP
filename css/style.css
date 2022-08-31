@@ -736,5 +736,16 @@ main {
     padding: 25px 15px;
   }
 }
+.footer {
+  background: rgb(31, 197, 100);
+  padding: 20px;
+}
 
+.footer-text {
+  color: black;
+  font-weight: 400;
+  font-size: 2em;
+  font-family: monospace;
+  position: relative;
+}
 
