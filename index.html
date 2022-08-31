@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="winter">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS -->
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/color.css">        
+  <link rel = "icon" href ="https://cdn-icons-png.flaticon.com/512/1820/1820142.png" type = "image/x-icon">
+
+
+
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.22.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <!-- Vue Js-->
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <title>Quran</title>
+</head>
+
+<body>
+  <section id="search-section">
+    <a href="#">
+      <!-- <img src="res/logo.png" alt="logo" class="logo"> -->
+    </a>
+    <div class="navbar bg-base-100 shadow-xl">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li><h3><i class="uil uil-copyright"></i> BY ALI RCHAM</h3></li>
+            <li><a href="https://github.com/RCHAMEXE"><i class="uil uil-github-alt"></i>Github</a></li>
+            <li><a href="https://facebook.com/3LIIX1"><i class="uil uil-facebook-f"></i>Facebook</a></li>
+            <li><a href="mailto:alircham1@gmail.com"><i class="uil uil-envelopes"></i>Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost normal-case text-xl">Quran</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <i class="fa-solid fa-swatchbook"></i>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li class="theme-item" theme-data="lemonade">
+                <a>
+                  <i class="fa-solid fa-sun"></i>
+                  Light
+                </a>
+              </li>
+              <li class="theme-item" theme-data="halloween">
+                <a>
+                  <i class="fa-solid fa-moon"></i>
+                  Dark
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="quranPlayer">
+          <div class="quranPlayer_body">
+              <div class="quranPlayer_header">
+                  <h2 class="quran_title"><i class="uil uil-headphones"></i> <span class="artist_name"> <i class="fa-solid fa-quran"></i> TheFatRat</span> - <span class="quran_name">Rise up</span></h2>
+                  <div class="audio_settings">
+                      <div class="btn settings_icon"><i class="fas fa-ellipsis-v"></i></div>
+                      <div class="settings_content">
+                          <a href="audio/012.mp3" download class="settings_item audio_download">Download <i class="fas fa-download"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="quranPlayer_main">
+                  <img src="img/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCth_NB4EUa-R-72vccUbcRvYU8ks5W9Kqw&usqp=CAU" alt="" class="quran_img">
+                  <div class="controlIndicator">You loved </div>
+              </div>
+              <div class="quranPlayer_footer">
+                  <div class="audio_functions">
+                      <div class="volume">
+                          <div class="btn volume_icon" title="Change Volume"><i class="fas fa-volume-up" id="volume_icon"></i></div>
+                          <div class="volume_item">
+                              <div class="volume_slider">
+                                  <div class="volume_thumb"><span></span></div>
+                                  <input class="volume_range" type="range" name="volume_range" min="0" max="100" id="volume_range">
+                                  <div class="volume_bar"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="love">
+                          <div class="btn love_icon" title="You don't love this quran"><i class="fas fa-heart" id="heart_icon"></i></div>
+                          <div class="love_item">
+                              <p class="love_text">Like this quran</p>
+                          </div>
+                      </div>
+                      <div class="audio_color">
+                          <div class="btn color_icon" title="Change colors"><i class="fas fa-palette" id="color_icon"></i></div>
+                          <div class="color_item">
+                              <div class="color_blog">
+                                  <p class="color_picker_text">Custom color</p>
+                                  <input type="color" class="color_picker" name="color_picker">
+                              </div>
+                              <p class="color_text">Most used colors</p>
+                              <div class="colors_content">
+                                  <div class="colors cGreen"><p class="colors_tooltip">Green</p></div>
+                                  <div class="colors cBlack"><p class="colors_tooltip">Black</p></div>
+                                  <div class="colors cDblue"><p class="colors_tooltip">Dark blue</p></div>
+                                  <div class="colors cPurple"><p class="colors_tooltip">Purple</p></div>
+                                  <div class="colors_content_item">
+                                      <div class="colors cBlue"><p class="colors_tooltip">Blue</p></div>
+                                      <div class="colors cCrimson"><p class="colors_tooltip">Crimson</p></div>
+                                      <div class="colors cAqua"><p class="colors_tooltip">Aqua</p></div>
+                                      <div class="colors cOrange"><p class="colors_tooltip">Orange</p></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="speed">
+                          <div class="btn speed_icon" title="quran speed"><i class="fas fa-tachometer-alt" id="speed_icon">
+                          </i></div>
+                          <div class="speed_item">
+                              <p class="speed_text">Playback speed: </p>
+                              <div class="speed_control">
+                                  <i class="fas fa-angle-left" id="speed_minus"></i>
+                                  <span class="speed_indi">1</span>
+                                  <i class="fas fa-angle-right" id="speed_plus"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="audio_bartime">
+                      <span class="audio_time audio_spendTime">00:00</span>
+                      <div class="audio_progress">
+                          <div class="slider_bar">
+                              <div class="thumb"><span></span></div>
+                              <div class="progress_bar"></div>
+                              <input class="audio_range" type="range" name="audio_range" min="0" max="100" value="0" id="audio_range">
+                          </div>
+                      </div>
+                      <span class="audio_time audio_remainingTime">00:00</span>
+                  </div>
+                  <div class="audio_controls">  
+                      <div class="btn anm_btn audio_playAgain" title="Playlist looped"><i  class="uil uil-arrow-random" id="loop_icon"></i></div>
+                      <div class="btn anm_btn audio_backward"><i class="fas fa-backward"></i></div>
+                      <div class="btn anm_btn play_icon"><i class="fas fa-play" id="play_icon"></i></div>
+                      <div class="btn anm_btn audio_forward"><i class="fas fa-forward"></i></div>
+                      <div class="btn anm_btn audio_list_icon" title="Playlist"><i class="uil uil-list-ul"></i></div>
+                  </div>
+              </div>
+              <div class="quran_list">
+                  <div class="quran_list_header">
+                      <h2 class="quran_list_title"><i class="uil uil-list-ul"></i> quran list</h2>
+                      <div class="close_icon"><i class="uil uil-multiply"></i></div>
+                  </div>
+                  <div class="quran_list_main">
+                      <ul class="list_qurans"></ul>
+                  </div>
+              </div>
+          </div>
+          <audio src="audio/TheFatRat-Rise_Up.mp3" class="audio" hidden></audio>
+          
+      </div>
+      <div class="equalizer">
+          <div id="equalizer">
+              <div id="horizontal"></div>
+              <div id="vertical-lines"></div>
+          </div>
+      </div>
+
+  </main>
+
+
+  <script src="js/app.js"></script>
+  <script src="js/quran_list.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
